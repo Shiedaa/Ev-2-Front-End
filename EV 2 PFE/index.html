@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro — TI3031</title>
+
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+
+  <div class="page-header">
+    <h1>Crear una cuenta</h1>
+    <p>Completa el formulario para registrarte en la plataforma.</p>
+  </div>
+
+
+  <form id="formulario-registro" novalidate autocomplete="off">
+    <div class="form-card">
+
+
+      <div class="section-divider">
+        <div class="section-icon">👤</div>
+        <h2>Datos de cuenta</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="row g-3">
+
+        
+        <div class="col-12 campo-grupo">
+          <label for="username">
+            Nombre de usuario <span class="requerido">*</span>
+          </label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="ej: jdoe22"
+            maxlength="10"
+            autocomplete="off"
+          >
+          <span id="error-username" class="error-msg" role="alert"></span>
+          <small class="text-muted" style="font-size:0.74rem; color:#8b9cc8 !important; margin-top:4px; display:block;">
+            5–10 caracteres · Comienza con letra · Dígitos solo al final · Sin acentos ni símbolos
+          </small>
+        </div>
+
+        
+        <div class="col-md-6 campo-grupo">
+          <label for="password">
+            Contraseña <span class="requerido">*</span>
+          </label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="3–6 caracteres"
+          >
+          <span id="error-password" class="error-msg" role="alert"></span>
+          <small style="font-size:0.74rem; color:#8b9cc8; margin-top:4px; display:block;">
+            3–6 caracteres · Mínimo una letra y un dígito
+          </small>
+        </div>
+
+        {}
+        <div class="col-md-6 campo-grupo">
+          <label for="confirm-password">
+            Confirmar contraseña <span class="requerido">*</span>
+          </label>
+          <input
+            type="password"
+            id="confirm-password"
+            class="form-control"
+            placeholder="Repite la contraseña"
+          >
+          <span id="error-confirm" class="error-msg" role="alert"></span>
+        </div>
+
+      </div>
+
+    
+      <div class="section-divider">
+        <div class="section-icon">📍</div>
+        <h2>Dirección postal</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="row g-3">
+
+        
+        <div class="col-md-7 campo-grupo">
+          <label for="direccion">
+            Dirección <span class="requerido">*</span>
+          </label>
+          <input
+            type="text"
+            id="direccion"
+            class="form-control"
+            placeholder="ej: Av. Los Robles 1234"
+          >
+          <span id="error-direccion" class="error-msg" role="alert"></span>
+        </div>
+
+        
+        <div class="col-md-5 campo-grupo">
+          <label for="comuna">
+            Comuna <span class="requerido">*</span>
+          </label>
+          <select id="comuna" class="form-select">
+            <option value="">— Selecciona una comuna —</option>
+            <optgroup label="Los Ríos">
+              <option value="Valdivia">Valdivia</option>
+              <option value="Corral">Corral</option>
+              <option value="Lanco">Lanco</option>
+              <option value="Los Lagos">Los Lagos</option>
+              <option value="Máfil">Máfil</option>
+              <option value="Mariquina">Mariquina</option>
+              <option value="Paillaco">Paillaco</option>
+              <option value="Panguipulli">Panguipulli</option>
+              <option value="La Unión">La Unión</option>
+              <option value="Futrono">Futrono</option>
+              <option value="Lago Ranco">Lago Ranco</option>
+              <option value="Río Bueno">Río Bueno</option>
+            </optgroup>
+            <optgroup label="Araucanía">
+              <option value="Temuco">Temuco</option>
+              <option value="Villarrica">Villarrica</option>
+              <option value="Pucón">Pucón</option>
+              <option value="Angol">Angol</option>
+            </optgroup>
+            <optgroup label="Los Lagos">
+              <option value="Puerto Montt">Puerto Montt</option>
+              <option value="Osorno">Osorno</option>
+              <option value="Puerto Varas">Puerto Varas</option>
+              <option value="Ancud">Ancud</option>
+            </optgroup>
+            <optgroup label="Biobío">
+              <option value="Concepción">Concepción</option>
+              <option value="Chillán">Chillán</option>
+              <option value="Los Ángeles">Los Ángeles</option>
+              <option value="Talcahuano">Talcahuano</option>
+            </optgroup>
+            <optgroup label="Metropolitana">
+              <option value="Santiago">Santiago</option>
+              <option value="Providencia">Providencia</option>
+              <option value="Las Condes">Las Condes</option>
+              <option value="Maipú">Maipú</option>
+              <option value="Pudahuel">Pudahuel</option>
+              <option value="La Florida">La Florida</option>
+              <option value="Peñalolén">Peñalolén</option>
+            </optgroup>
+            <optgroup label="Valparaíso">
+              <option value="Valparaíso">Valparaíso</option>
+              <option value="Viña del Mar">Viña del Mar</option>
+              <option value="San Antonio">San Antonio</option>
+            </optgroup>
+            <optgroup label="Norte">
+              <option value="Antofagasta">Antofagasta</option>
+              <option value="Iquique">Iquique</option>
+              <option value="Arica">Arica</option>
+              <option value="Calama">Calama</option>
+            </optgroup>
+          </select>
+          <span id="error-comuna" class="error-msg" role="alert"></span>
+        </div>
+
+      </div>
+
+      
+      <div class="section-divider">
+        <div class="section-icon">📞</div>
+        <h2>Información de contacto</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="row g-3">
+
+        
+        <div class="col-md-5 campo-grupo">
+          <label for="telefono">
+            Número de teléfono <span class="requerido">*</span>
+          </label>
+          <input
+            type="text"
+            id="telefono"
+            class="form-control"
+            placeholder="+56 9 1234 5678"
+          >
+          <span id="error-telefono" class="error-msg" role="alert"></span>
+        </div>
+
+        
+        <div class="col-md-7 campo-grupo">
+          <label for="url-web">Página web personal <span style="color:#8b9cc8; font-weight:400;">(opcional)</span></label>
+          <input
+            type="text"
+            id="url-web"
+            class="form-control"
+            placeholder="https://www.mipagina.com"
+          >
+          <span id="error-url" class="error-msg" role="alert"></span>
+        </div>
+
+      </div>
+
+      
+      <div class="section-divider">
+        <div class="section-icon">🎯</div>
+        <h2>Aficiones y pasatiempos</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="campo-grupo">
+        <label for="input-aficion">
+          Agrega tus aficiones <span class="requerido">* (mínimo 2)</span>
+        </label>
+        <div class="aficiones-container">
+          <input
+            type="text"
+            id="input-aficion"
+            class="form-control"
+            placeholder="ej: Fotografía, Senderismo, Programación..."
+          >
+          <button type="button" id="btn-agregar-aficion" class="btn-agregar">
+            + Agregar
+          </button>
+        </div>
+        <span id="error-aficion" class="error-msg" role="alert"></span>
+
+        
+        <ul id="lista-aficiones"></ul>
+        <span id="error-lista-aficiones" class="error-msg" role="alert"></span>
+      </div>
+
+
+      <button type="submit" id="btn-submit" class="btn-submit">
+        Crear Cuenta
+      </button>
+
+    </div>
+  </form>
+
+
+  <div id="resumen-registro">
+    <div class="resumen-card">
+
+      <div class="resumen-check" role="img" aria-label="Registro exitoso">✓</div>
+      <h2>¡Registro exitoso!</h2>
+      <p>Tu cuenta ha sido creada correctamente. Aquí están tus datos:</p>
+
+      <div class="resumen-tabla">
+
+        <div class="resumen-fila">
+          <span class="resumen-clave">Usuario</span>
+          <span id="resumen-usuario" class="resumen-valor"></span>
+        </div>
+
+        <div class="resumen-fila">
+          <span class="resumen-clave">Dirección</span>
+          <span id="resumen-direccion" class="resumen-valor"></span>
+        </div>
+
+        <div class="resumen-fila">
+          <span class="resumen-clave">Teléfono</span>
+          <span id="resumen-telefono" class="resumen-valor"></span>
+        </div>
+
+        <div class="resumen-fila">
+          <span class="resumen-clave">Web</span>
+          <span id="resumen-url" class="resumen-valor"></span>
+        </div>
+
+        <div class="resumen-fila">
+          <span class="resumen-clave">Aficiones</span>
+          <ul id="resumen-aficiones" class="resumen-valor"></ul>
+        </div>
+
+      </div>
+
+      <button type="button" id="btn-nuevo-registro" class="btn-nuevo">
+        ← Nuevo registro
+      </button>
+
+    </div>
+  </div>
+
+
+  <script src="js/validation.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
